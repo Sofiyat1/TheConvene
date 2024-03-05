@@ -1,0 +1,169 @@
+* {
+    background-color: #FFFEFE;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overallSignup, .overallSignin {
+    margin: auto;
+    background-color: #F39494;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.createh1, .welcome {
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;
+    color: #333333;
+    font-weight: bold;
+} 
+
+.labelInput{
+    margin: 40px;
+}
+
+.already{
+    text-align: center;
+    padding: 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+.convene{
+    padding: 5px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #333333;
+    color: #333333;
+    font-weight: bold;
+}
+
+.span{
+    color: #089FE0;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form {
+    margin: auto;
+    background-color: #FFFEFE;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 20px;
+    max-height: 600px;
+    height: 75vh;
+}
+
+label {
+    display: inline;
+    margin-top: 3px;
+}
+
+input{
+    padding: 5px;
+    background-color: #F5F5F5;
+    border: none;
+    height: 30px;
+    font-style: italic;
+    color: #999999;
+    border-radius: 5px;
+}
+
+input[type = "text"]{
+    width: 49%;
+    margin: 1px;
+    padding-left: 5px;
+}
+
+#username{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    padding-left: 5px;
+    color: #999999;
+}
+
+#lastname{
+    width: 50%;
+}
+
+#firstname{
+    width: 49%;
+}
+
+input[type = "email"]{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding-left: 5px;
+    color: #999999;
+}
+
+input[type="password"]{
+    margin: 1px;
+    width: 49%;
+    padding-left: 5px;
+}
+
+#password{
+    width: 49%;
+}
+
+#repeatPassword{
+    width: 50%;
+}
+
+.labelButton{
+    text-align: center;
+}
+
+#signinPassword{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    padding-left: 5px;
+    color: #999999;
+}
+
+.signinLabelButton{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn{
+    background-color: #089FE0;
+    text-align: center;
+    width: 85%;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 5px;
+    color: #666666;
+
+}
+
+.checkbox .span{
+    margin-left: 3px;
+}
