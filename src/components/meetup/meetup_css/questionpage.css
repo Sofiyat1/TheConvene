@@ -1,0 +1,119 @@
+.questionWrap {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+    height: 200px;
+}
+
+.quest{
+    display: flex;
+    justify-content: flex-start;
+    line-height: 20px;
+}
+
+.user{
+    border-radius: 50%;
+    display: flex;
+    margin: 10px;
+}
+
+.icon{
+    margin: 10px;
+}
+
+.userName{
+    position: relative;
+    top: 5px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+.userQuestion{
+    background-color: whitesmoke;
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.vote{
+    position: relative;
+    top: -10px;
+    background: none;
+    padding: 5px;
+    text-align: left;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.vote span, .comment span{
+    vertical-align: middle;
+    background: none;
+    margin-right: 10px;
+}
+
+.vote img, .comment img{
+    vertical-align: middle;
+}
+
+.up, .down, .comment{
+    width: 20px;
+    background: none;
+}
+
+.time{
+    display: inline;
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+
+
+/*.iconsWrap {
+    width: 50px;
+    height: 192px;
+    padding: 10px;
+
+
+}
+
+.icon {
+    margin: 10px;
+
+}
+
+
+
+
+
+
+
+
+.userQueWrap {
+    width: 250px;
+    height: 130px;
+    font-size: 12px;
+    background-color: #176DEE;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.que {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+*/

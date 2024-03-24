@@ -1,4 +1,4 @@
-* {
+*{
     background-color: #FFFEFE;
     padding: 0;
     margin: 0;
@@ -45,7 +45,6 @@
 
 .span{
     color: #089FE0;
-    text-decoration: underline;
     cursor: pointer;
     font-weight: bold;
 }
@@ -73,6 +72,14 @@ input{
     font-style: italic;
     color: #999999;
     border-radius: 5px;
+}
+
+.terms{
+    color: #089FE0;
+}
+
+.terms:hover{
+    color: blue;
 }
 
 input[type = "text"]{
@@ -137,14 +144,20 @@ input[type="password"]{
 }
 
 .btn{
-    background-color: #089FE0;
+    border: 3px solid blanchedalmond;
+    background-color: #F39494;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+    color: black;
+    font-weight: bold;    
     text-align: center;
     width: 85%;
     padding: 10px;
-    border: none;
-    color: white;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.btn:hover{
+    border: 2px solid black;
 }
 
 .checkbox{
@@ -161,7 +174,6 @@ input[type="password"]{
 .checkbox input[type="checkbox"] {
     margin-right: 5px;
     color: #666666;
-
 }
 
 .checkbox .span{

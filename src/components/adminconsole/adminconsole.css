@@ -1,0 +1,96 @@
+body{
+    max-height: 1200px;
+    height: 90%;
+}
+
+.form{
+    height: 100vw;
+    overflow-y: auto;
+}
+
+select{
+    margin-top: 20px;
+    color: #999999;
+}
+
+#industry{
+    margin-left: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.industry{
+    background-color: #F5F5F5;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 1px;
+    color: #666666;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#industry option{
+    background-color: #999999;
+    padding: 0;
+    color: white;
+    cursor: pointer;
+}
+
+fieldset{
+    margin-top: 30px;
+    padding: 10px;
+    font-style: italic;
+    border: 1px solid #F5F5F5;
+    margin-bottom: 25px;
+}
+
+textarea{
+    background-color: #F5F5F5;
+    font-style: italic;
+    color: black;
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
+}
+
+.fileLabel{
+    font-style: italic;
+    padding: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"]{
+    cursor: pointer;
+}
+
+
+.button{
+    margin-top: 60px;
+    position: relative;
+    left: 10px;
+}
+
+.button button:hover{
+    border: 2px solid black;
+}
+
+.btnAdminConsole{
+    border: 3px solid blanchedalmond;
+    background-color: #F39494;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+    color: black;
+    font-weight: bold;    
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.checkbox{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}

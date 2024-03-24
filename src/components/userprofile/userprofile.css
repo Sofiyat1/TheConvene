@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overallProfile {
+    background-color: #F39494;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+    max-width: auto;
+    max-height: 1200px;
+    height: 800px;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.leftside {
+    height: 500px;
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.avatar {
+    background: none;
+    padding: 20px;
+}
+
+.avatar img {
+    background: none;
+    text-align: center;
+    width: 90px;
+}
+
+.profileName {
+    background: none;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10px;
+}
+
+.avatar p {
+    background: none;
+}
+
+.userDetails {
+    margin-top: 10px;
+    padding: 5px;
+    line-height: 40px;
+    background: none;
+}
+
+.italic{
+    color: blue;
+    background: none;
+    font-weight: bold;
+}
+
+.bold {
+    background: none;
+    font-weight: bold;
+    font-size: 14;
+}
+
+.logOutButton {
+    margin-top: 40%;
+    text-align: center;
+}
+
+.logOutButton button {
+    background-color: #F39494;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid blanchedalmond;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.logOutButton button:hover{
+    border: 2px solid black;
+}
+
+/* Right side */
+.rightside {
+    height: 500px;
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.activities {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileTxt {
+    background: none;
+}
+
+.profileTxt h3 {
+    background: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.actList {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    width: 50%;
+}
+
+.actList1,
+.actList2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.actList1 p, .actList2 p{
+    background: none;
+}
+
+.actBtn {
+    position: absolute;
+    right: 20%;
+}
+
+.actBtn button{
+    cursor: pointer;
+    border: none;
+    background-color: #F39494;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid blanchedalmond;
+    color: black;
+    font-weight: bold;
+}
+
+.actBtn button:hover{
+    border: 2px solid black;
+}
+
+.number{
+    color: #089FE0;
+    background: none;
+    width: 10%;
+    position: relative;
+    left: 50%;
+}
