@@ -1,5 +1,7 @@
 import React from "react";
 import "../account/signinSignup.css"
+import Header from "../Header/Header2";
+import Footer from "../Footer/Footer";
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
@@ -7,7 +9,7 @@ import { Link } from "react-router-dom"
 function Admin() {
     const [formData, setFormData] = useState(
         {
-            username: "",
+            email: "",
             password: "",
         })
 
@@ -34,6 +36,7 @@ function Admin() {
 
     return (
         <div className="adminConsole">
+            <Header />
             <div className="overallSignin">
                 <form onSubmit={handleSubmit}>
                     <h1 className="welcome">Login as an Admin</h1>
@@ -41,25 +44,21 @@ function Admin() {
                     <div className="labelInput">
                         <p className="convene">Convene</p>
 
-                        <label htmlFor="username">
+                        <label htmlFor="email">
                             <input
                                 type="text"
-                                placeholder="Enter username"
-                                maxLength="100"
-                                minLength="3"
-                                id="username"
-                                name="username"
+                                placeholder="Enter email"
+                                id="email"
+                                name="email"
                                 onChange={handleChange} 
-                                value={formData.username}
+                                value={formData.email}
                             />
                         </label>
                         <label htmlFor="password">
                             <input
                                 type="password"
                                 placeholder="Enter password"
-                                maxlength="100"
-                                minLength="3"
-                                id="signinPassword"
+                                id="password"
                                 name="password"
                                 onChange={handleChange} 
                                 value={formData.password}
@@ -74,6 +73,7 @@ function Admin() {
 
                 </form>
             </div>
+            <Footer />
         </div>
     )
 }

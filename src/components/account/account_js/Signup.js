@@ -1,14 +1,15 @@
-import React from "react";
-import "../../account/signinSignup.css";
+import React, { useState } from "react";
+import "../../account/signinSignup.css"
+import Header from "../../Header/Header2";
+import Footer from "../../Footer/Footer";
 
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useUserAuth } from "../../../../src/context/UserAuthContext";
+import { useUserAuth } from "../../../context/UserAuthContext";
 
 function Signup() {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     repeatPassword: "",
@@ -19,7 +20,7 @@ function Signup() {
     rememberForget: true,
   });
 
-  const [error, setError] = useState("");
+  const [error, setError] = useState("")
   const signUp = useUserAuth();
   const navigate = useNavigate();
 
@@ -35,18 +36,35 @@ function Signup() {
     });
   }
 
+  const handlePasswordChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    if (formData.password !== formData.repeatPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+    
     try {
       await signUp(formData.email, formData.password);
-      navigate("/");
+      navigate("/signin");
+      alert("Please check email for verification")
     } catch (err) {
       setError(err.message);
     }
   };
+
   return (
     <div className="signup">
+      <Header />
       <div className="overallSignup">
         <form onSubmit={handleSubmit}>
           <h1 className="createh1">Create account</h1>
@@ -65,8 +83,9 @@ function Signup() {
                 type="text"
                 placeholder="Firstname"
                 id="firstname"
+                name="firstName"
                 onChange={handleChange}
-                value={formData.firstname}
+                value={formData.firstName}
                 required
               />
             </label>
@@ -76,7 +95,8 @@ function Signup() {
                 placeholder="Lastname"
                 id="lastname"
                 onChange={handleChange}
-                value={formData.lastname}
+                name="lastName"
+                value={formData.lastName}
                 required
               />
             </label>
@@ -96,7 +116,7 @@ function Signup() {
                 type="password"
                 placeholder="Create a password"
                 minLength="6"
-                maxlength="15"
+                maxLength="15"
                 id="password"
                 name="password"
                 onChange={handleChange}
@@ -106,15 +126,15 @@ function Signup() {
             </label>
             <label htmlFor="repeatPassword">
               <input
-                type="password"
-                placeholder="Repeat password"
-                minLength="6"
-                maxlength="15"
-                id="repeatPassword"
-                name="repeatPassword"
-                onChange={handleChange}
-                value={formData.password}
-                required
+              type="password"
+              placeholder="Repeat password"
+              minLength="6"
+              maxLength="15"
+              id="repeatPassword"
+              name="repeatPassword"
+              onChange={handleChange}
+              value={formData.repeatPassword}  // Update value to formData.repeatPassword
+              required
               />
             </label>
           </div>
@@ -130,6 +150,7 @@ function Signup() {
                 type="checkbox"
                 onChange={handleChange}
                 name="agreement"
+                id="agreement"
                 checked={formData.agreement}
                 required
               />
@@ -142,8 +163,12 @@ function Signup() {
           </div>
         </form>
       </div>
+      {error && <p>{error}</p>}
+      <Footer />
     </div>
   );
 }
 
 export default Signup;
+
+

@@ -36,8 +36,7 @@ function App() {
 
     {
       path: "/profile",
-      element: <UserAuthContextProvider> <Protectedroute> <Userprofile /> </Protectedroute> </UserAuthContextProvider>
-
+      element:  <Userprofile /> 
     },
 
     {

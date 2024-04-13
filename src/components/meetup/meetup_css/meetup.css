@@ -89,20 +89,18 @@ body {
 }
 
 .thoughts {
-  margin-bottom: 20px;
   color: #818A98;
+  margin: 10px;
+  font-size: 17px;
+  padding: 10px;
 }
 
 .askQuestionWrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 80%;
   text-align: center;
-  border: 1px solid #000;
-  border-radius: 25px;
-  margin-top: 80px;
   position: relative;
+  padding: 10px;
   left: 50px;
 }
 
@@ -111,18 +109,18 @@ textarea {
   justify-content: space-evenly;
   border-radius: 15px;
   border: none;
-  color: #9DA4AF;
+  height: 40%;
   text-align: center;
-  text-indent: -20%;
-  margin-top: 10px;
 }
 
 .sendIcon {
   position: relative;
-  left: 60px;
+  cursor: pointer;
+  left: 10px;
 }
 
 .questionIcon {
+  cursor: pointer;
   position: relative;
   right: 10px;
 }

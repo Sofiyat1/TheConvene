@@ -4,8 +4,9 @@ body{
 }
 
 .form{
-    height: 100vw;
-    overflow-y: auto;
+    height: 95vh;
+    overflow: auto;
+    border-radius: 20px;
 }
 
 select{

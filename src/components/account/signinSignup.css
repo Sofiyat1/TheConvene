@@ -54,9 +54,9 @@ form {
     background-color: #FFFEFE;
     max-width: 600px;
     width: 90%;
-    border-radius: 20px;
     max-height: 600px;
     height: 75vh;
+    border-radius: 20px;
 }
 
 label {
@@ -70,7 +70,6 @@ input{
     border: none;
     height: 30px;
     font-style: italic;
-    color: #999999;
     border-radius: 5px;
 }
 

@@ -7,23 +7,21 @@
 .overallProfile {
     background-color: #F39494;
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
-    max-width: auto;
-    max-height: 1200px;
+    max-height: 1000px;
     height: 800px;
-    margin: auto;
+    max-width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    justify-content: center;
-}
-
 .leftside {
-    height: 500px;
+    padding-top: 10px;
     width: 30%;
+    height: 600px;
     background-color: whitesmoke;
     border-radius: 10px;
     margin: 20px;
@@ -72,11 +70,11 @@
 }
 
 .logOutButton {
-    margin-top: 40%;
+    margin-top: 50%;
     text-align: center;
 }
 
-.logOutButton button {
+.logOutButton button, .list button {
     background-color: #F39494;
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
     text-align: center;
@@ -89,23 +87,25 @@
     cursor: pointer;
 }
 
-.logOutButton button:hover{
+.logOutButton button:hover, .list button:hover{
     border: 2px solid black;
 }
 
 /* Right side */
-.rightside {
-    height: 500px;
+
+
+.middleside {
+    padding-top: 10px;
     width: 30%;
+    height: 600px;
     background-color: whitesmoke;
     border-radius: 10px;
     margin: 20px;
 }
 
+
 .activities {
     background: none;
-    display: flex;
-    justify-content: space-between;
 }
 
 .profileTxt {
@@ -120,54 +120,124 @@
     margin-top: 10px;
 }
 
-.actList {
-    display: flex;
-    flex-direction: column;
+.list{
     background: none;
-    width: 50%;
+    padding: 20px;
 }
 
-.actList1,
-.actList2 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.list > .list1, .list2{
     background: none;
-    margin: 10px;
     padding: 10px;
-    border-radius: 10px;
-    width: 90%;
 }
 
-.actList1 p, .actList2 p{
-    background: none;
-}
-
-.actBtn {
-    position: absolute;
-    right: 20%;
-}
-
-.actBtn button{
-    cursor: pointer;
-    border: none;
-    background-color: #F39494;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));    border-radius: 10px;
-    padding: 10px;
-    border: 3px solid blanchedalmond;
-    color: black;
-    font-weight: bold;
-}
-
-.actBtn button:hover{
-    border: 2px solid black;
+.list2 p{
+    margin-top: 40px;
 }
 
 .number{
-    color: #089FE0;
+    color: blue;
     background: none;
-    width: 10%;
+    position: absolute;
+    left: 52%;
+    cursor: pointer;
+}
+
+
+/*Upcoming Events*/
+.rightside {
+    padding-top: 10px;
+    width: 50%;
+    height: 600px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.rightsideWrapper{
+    border-radius: 10px;
+    overflow: hidden;
+    background: none;
+}
+
+.upcoming{
+    background: none;
+    padding: 10px;
     position: relative;
-    left: 50%;
+}
+
+.upcoming h1{
+    background: none;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.upcoTime1{
+    background: none;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.upcoTime2{
+    background: none;
+    position: absolute;
+    right: 5%;
+    top: 55%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.postUpco{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 25px;
+    line-height: 20px;
+}
+
+.postUpco h2{
+    background: none;
+    padding-bottom: 20px;
+}
+
+.postUpco p{
+    margin-top: 5px;
+    background: none;
+}
+
+.statusDate{
+    text-align: left;
+    margin-top: 20px;
+    font-weight: bolder;
+    background: none;
+}
+
+.statusDate > p{
+    line-height: 10px;
+
+}
+
+.upcoIcon{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    background: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.upcoIcon > img{
+    background: none;
+    cursor: pointer;
+    margin-left: 5px; 
+    width: 20px; 
+}
+
+.upcoIcon > img:hover{
+    background-color: #F39494;
+    border-radius: 10px;
 }

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./home.css";
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 import Background from "./home_assets/backg.jpg";
 import Networking from "./home_assets/network-2.png";
@@ -49,30 +50,7 @@ function Home() {
 
   return (
     <div className="homepage">
-      <div className="homenav">
-        <div className="lefthomenav">
-          <h3>Convene.</h3>
-        </div>
-        <div className="righthomenav">
-          <ul>
-            <li>
-              <a href="#our-story">Our Story</a>
-            </li>
-            <li>
-              <Link to="/signup">Sign up</Link>
-            </li>
-            <li>
-              <Link to="/signin">Login</Link>
-            </li>
-            <li>
-              <Link to="/admin">Admin Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/becomeadmin">Become Admin</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <Header />
       <section className="homebody">
         <div className="backg">
           <img className="background" src={Background} alt="backg" />
@@ -144,8 +122,7 @@ function Home() {
           </p>
         </div>
       </div>
-      <p className="copyright">&copy; Tech4dev</p>
-
+      <Footer />
     </div>
   );
 }

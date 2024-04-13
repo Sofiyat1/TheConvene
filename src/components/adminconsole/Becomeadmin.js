@@ -1,14 +1,15 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "../Header/Header2";
+import Footer from "../Footer/Footer";
 
 import "../account/signinSignup.css"
 import "../adminconsole/adminconsole.css";
 
 function Becomeadmin() {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     repeatPassword: "",
@@ -35,6 +36,7 @@ function Becomeadmin() {
   }
   return (
     <div className="becomeadmin">
+      <Header />
       <div className="overallSignup">
         <form onSubmit={handleSubmit} className="form">
           <h1 className="createh1">Create an Admin account</h1>
@@ -55,7 +57,7 @@ function Becomeadmin() {
                 minLength="3"
                 id="firstname"
                 onChange={handleChange}
-                value={formData.firstname}
+                value={formData.firstName}
                 required
               />
             </label>
@@ -63,11 +65,9 @@ function Becomeadmin() {
               <input
                 type="text"
                 placeholder="Lastname"
-                maxlength="100"
-                minLength="3"
                 id="lastname"
                 onChange={handleChange}
-                value={formData.lastname}
+                value={formData.lastName}
                 required
               />
             </label>
@@ -88,7 +88,7 @@ function Becomeadmin() {
                 type="password"
                 placeholder="Create a password"
                 minLength="6"
-                maxlength="15"
+                maxLength="15"
                 id="password"
                 name="password"
                 onChange={handleChange}
@@ -101,7 +101,7 @@ function Becomeadmin() {
                 type="password"
                 placeholder="Repeat password"
                 minLength="6"
-                maxlength="15"
+                maxLength="15"
                 id="repeatPassword"
                 name="repeatPassword"
                 onChange={handleChange}
@@ -166,6 +166,7 @@ function Becomeadmin() {
                 type="checkbox"
                 onChange={handleChange}
                 name="agreement"
+                id="agreement"
                 checked={formData.agreement}
                 required
               />
@@ -178,8 +179,31 @@ function Becomeadmin() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
 
 export default Becomeadmin;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

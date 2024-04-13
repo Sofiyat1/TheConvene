@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../meetup_css/meetup.css"
 import Questions from "./Questionpage"
+import Header from "../../Header/Header2";
+import Footer from "../../Footer/Footer";
 
 //right bar
 import Userprofile from "../meetup_assets/userprofile.png"
@@ -19,8 +21,14 @@ import Messageicon from "../meetup_assets/Frame 29.png";
 
 
 function Meetup() {
+  const [textareaValue, setTextareaValue] = useState('Ask a question...');
+
+    const handleChange = (event) => {
+        setTextareaValue(event.target.value);
+    }
   return (
     <div className="meetupSection">
+      <Header />
       <div className="allWrapper">
         <div className="leftbar">
           <ul>
@@ -76,13 +84,14 @@ function Meetup() {
           />
 
           <div className="askQuestionWrap">
-            <img className="questionIcon" src={Questionicon} alt="question icon" width='24px' height='24px' />
-            <textarea value="Ask a question..."> </textarea>
-            <img className="sendIcon" src={Sendicon} alt="send icon" width='24px' height='24px' />
+            <img className="questionIcon" src={Questionicon} alt="question icon" />
+            <textarea value={textareaValue} onChange={handleChange}></textarea>
+            <img className="sendIcon" src={Sendicon} alt="send icon" />
           </div>
         </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

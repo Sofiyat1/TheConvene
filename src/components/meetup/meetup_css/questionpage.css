@@ -12,6 +12,8 @@
     display: flex;
     justify-content: flex-start;
     line-height: 20px;
+    margin-bottom: 10px;
+
 }
 
 .user{
@@ -75,45 +77,3 @@
     position: relative;
     left: 150px;
 }
-
-
-
-/*.iconsWrap {
-    width: 50px;
-    height: 192px;
-    padding: 10px;
-
-
-}
-
-.icon {
-    margin: 10px;
-
-}
-
-
-
-
-
-
-
-
-.userQueWrap {
-    width: 250px;
-    height: 130px;
-    font-size: 12px;
-    background-color: #176DEE;
-    color: #ffffff;
-    border-radius: 6px;
-    padding: 5px;
-}
-
-.que {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-
-*/

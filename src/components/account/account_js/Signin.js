@@ -1,4 +1,6 @@
 import "../../account/signinSignup.css"
+import Header from "../../Header/Header2.js";
+import Footer from "../../Footer/Footer.js";
 
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,7 +8,7 @@ import { useUserAuth } from "../../../context/UserAuthContext.js";
 
 function Signin() {
   const [formData, setFormData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -43,6 +45,7 @@ function Signin() {
 
   return (
     <div className="signin">
+      <Header />
       <div className="overallSignin">
         <form onSubmit={handleSubmit}>
           <h1 className="welcome">Welcome Back</h1>
@@ -54,16 +57,14 @@ function Signin() {
           </p>
           <div className="labelInput">
             <p className="convene">Convene</p>
-            <label htmlFor="username">
+            <label htmlFor="email">
               <input
-                type="text"
-                placeholder="Enter username"
-                maxLength="100"
-                minLength="3"
-                id="username"
-                name="username"
+                type="email"
+                placeholder="Enter email"
+                id="email"
+                name="email"
                 onChange={handleChange}
-                value={formData.username}
+                value={formData.email}
               />
             </label>
             <label htmlFor="password">
@@ -72,7 +73,7 @@ function Signin() {
                 placeholder="Enter password"
                 maxLength="100"
                 minLength="3"
-                id="signinPassword"
+                id="password"
                 name="password"
                 onChange={handleChange}
                 value={formData.password}
@@ -87,120 +88,10 @@ function Signin() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
 
 export default Signin;
-
-/*
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useUserAuth } from "../../../context/UserAuthContext.js"
-
-
-
-function Signin() {
-  const [formData, setFormData] = useState("Login", {
-    username: "",
-    password: "",
-    // confirmPassword: "",
-  });
-
-  const [error, setError] = useState("");
-  const logIn  = useUserAuth();
-  const navigate = useNavigate();
-
-  const googleSignin = useUserAuth();
-  console.log(logIn)
-
-  console.log(formData);
-
-  function handleChange(event) {
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [event.target.name]: event.target.value,
-      };
-    });
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // if(formData.password === formData.confirmPassword){
-    //    console.log("Successfully signed up")
-    // } else {
-    //     console.log("Passwords do not match")
-    // }
-
-    setError("");
-    try {
-      await logIn(formData.emailAddress, formData.password);
-      navigate("/home");
-    } catch (err) {
-      setError(err.message);
-    }
-
-    // submitToApi(formData)
-  };
-
-  const handleGoogleSignIn = async (e) => {
-    e.preventDefault();
-    try {
-      await googleSignin();
-      navigate("/profile");
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  return (
-    <div className="signin">
-      <div className="overallSignin">
-        <form onSubmit={handleSubmit}>
-          <h1 className="welcome">Welcome Back</h1>
-          <p className="already">Are you new here? <span className="span"><Link to="/signup">Sign up</Link></span></p>
-          <div className="labelInput">
-          <p className="convene">Convene</p>
-
-            <label htmlFor="username">
-              <input
-                type="text"
-                placeholder="Enter username"
-                maxLength="100"
-                minLength="3"
-                id="username"
-                name="username"
-                onChange={handleChange}
-                value={formData.username}
-              />
-              </label>
-              <label htmlFor="password">
-              <input
-                type="password"
-                placeholder="Enter password"
-                maxlength="100"
-                minLength="3"
-                id="signinPassword"
-                name="password"
-                onChange={handleChange}
-                value={formData.password}
-              />
-              </label>
-          </div>
-          <div className="signinLabelButton">
-          <label htmlFor="btnn">
-            <button className="btn" id="btnn">Sign in</button>
-          </label>
-          </div>
-          
-        </form>
-      </div>
-    </div>
-  );
-}
-
-export default Signin;
-*/
 
